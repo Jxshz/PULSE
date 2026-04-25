@@ -1,0 +1,90 @@
+/* This sets the main font and base page background. */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #ffffff;
+}
+
+/* This gives cards the soft floating shadow used across the dashboard. */
+.card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* This is a simple fade animation used for lightweight UI transitions. */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* This defines the fade frames used above. */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* This styles the glowing score box on the right side of the dashboard. */
+.score-glow {
+    background: rgba(59, 130, 246, 0.08);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.18);
+    border-radius: 1.5rem;
+    padding: 1rem 1.25rem;
+    transition: box-shadow 0.35s ease;
+}
+
+/* This makes the score box glow a bit more after each successful prediction. */
+.score-glow.animate {
+    box-shadow: 0 0 50px rgba(59, 130, 246, 0.3);
+}
+
+/* This gives the chart area a fixed, cleaner height so it does not stretch awkwardly. */
+.chart-shell {
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+
+/* This forces the chart canvas to fill the chart shell neatly. */
+#impactChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* This makes the chart a little taller on larger screens. */
+@media (min-width: 640px) {
+    .chart-shell {
+        height: 360px;
+    }
+}
+
+/* This restyles the browser range input to match the dashboard look. */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e5e7eb;
+    height: 6px;
+    border-radius: 3px;
+}
+
+/* This styles the draggable thumb in WebKit-based browsers. */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+}
+
+/* This styles the draggable thumb in Firefox. */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    border: none;
+}
