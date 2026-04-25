@@ -66,7 +66,3 @@ curl http://127.0.0.1:5000/health
 - Procfile included
 - `railway.toml` included
 - Healthcheck endpoint: `/health`
-
-## Submission Notes
-
-The Xpecto submission checklist is in [docs/xpecto26-submission-checklist.md](docs/xpecto26-submission-checklist.md).
